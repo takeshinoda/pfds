@@ -31,7 +31,7 @@ insert' :: (Ord a) => a -> Heap a -> Heap a
 insert' x E = T 1 x E E
 insert' x h@(T r y a b)
   | x <= y = T 1 x h E
-  | otherwise = T r y a (insert x b)
+  | otherwise = T r y a (insert' x b)
 
 -- 3.3
 heapList :: (Ord a) => [a] -> [Heap a]
