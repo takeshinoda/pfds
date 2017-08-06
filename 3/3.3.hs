@@ -56,5 +56,8 @@ main = do
 
 
   print "----"
+  print (insert 5 (insert 4 (insert 3 (insert 2 (insert 1 E)))))
   print (insert 6 (insert 5 (insert 4 (insert 3 (insert 2 (insert 1 E))))))
-  print (fromOrdList [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+  print (fromOrdList [1, 2, 3, 4, 5, 6])
+  print (insert 4 (insert 3 (insert 2 (insert 1 E))))
+  print (fromOrdList [1, 2, 3, 4])
