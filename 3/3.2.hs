@@ -23,4 +23,7 @@ insTree t ts@(t':ts')
 main = do
   let ts = []
   print (insert 4 (insert 2 (insert 5 (insert 3 ts))))
+  print (insert 6 (insert 4 (insert 2 (insert 5 (insert 3 ts)))))
+  print (insert 7 (insert 6 (insert 4 (insert 2 (insert 5 (insert 3 ts))))))
+  print (insert 5 (insert 3 ts))
 

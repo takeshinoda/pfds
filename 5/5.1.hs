@@ -13,7 +13,7 @@ snoc' :: Q a -> a -> Q a
 snoc' (BQ f r) x = checkf f ([x] ++ r)
 
 fr :: [a] -> Q a
-fr x = BQ (reverse . take (harf x) x) (drop (harf x) x)
+fr x = BQ ((take (harf x) x) . reverse) (drop (harf x) x)
   where
     harf x = (length x) `div` 2
 
